@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philderev — Web Designer</title>
+<meta name="description" content="Philderev — web designer, 20 years in VS Code, now AI-assisted. Portfolio of contractor, agency, and local business websites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,300;0,400;0,600;0,700;0,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-tone="dark">
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress-rail" aria-hidden="true"></div>
+
+  <main class="viewport" role="region" aria-label="Portfolio — scroll or use arrow keys to move between sections">
+
+    <!-- shared smoke atmosphere, parallaxed independently of the track -->
+    <div class="atmosphere" aria-hidden="true">
+      <canvas class="particle-field"></canvas>
+      <div class="transition-portal">
+        <span class="portal-ring r1"></span>
+        <span class="portal-ring r2"></span>
+        <span class="portal-ring r3"></span>
+        <span class="portal-core"></span>
+      </div>
+      <div class="smoke-layer l1" data-speed="0.18">
+        <div class="smoke-blob a"></div>
+        <div class="smoke-blob d"></div>
+      </div>
+      <div class="smoke-layer l2" data-speed="0.32">
+        <div class="smoke-blob b"></div>
+      </div>
+      <div class="smoke-layer l3" data-speed="0.48">
+        <div class="smoke-blob c"></div>
+      </div>
+    </div>
+
+    <div class="track">
+
+      <!-- 01 INTRO -->
+      <section class="panel intro" data-label="Intro">
+        <div class="panel-content">
+          <p class="eyebrow">&gt;01_ INTRO <span class="cursor"></span></p>
+          <h1 class="name">PHILDEREV</h1>
+          <p class="role">Web designer. <b>20 years</b> living inside VS Code — now working AI‑assisted to move faster without lowering the bar.</p>
+          <p class="scroll-hint">SCROLL OR DRAG <span class="arrow">→</span></p>
+        </div>
+        <figure class="intro-portrait" aria-label="Portrait of Philderev">
+          <img class="portrait-img portrait-base" src="me.png" alt="Portrait of Philderev">
+          <img class="portrait-img portrait-next" src="me3.png" alt="" aria-hidden="true">
+        </figure>
+      </section>
+
+      <!-- 02 ABOUT -->
+      <section class="panel about" data-label="About">
+        <div class="panel-content">
+          <p class="eyebrow">&gt;02_ ABOUT <span class="cursor"></span></p>
+          <div class="about-grid">
+            <div>
+              <h2>Two decades.<br>One editor.<br>New tools.</h2>
+              <p>I'm Philderev — a web designer who has spent 20 years writing and shaping sites in VS Code. AI didn't replace that craft, it sharpened it: I work smarter and faster now, but every site I ship still has to look right, run clean, and do its job.</p>
+              <div class="tags">
+                <span class="tag">20 YEARS</span>
+                <span class="tag">VS CODE</span>
+                <span class="tag">AI‑ASSISTED WORKFLOW</span>
+              </div>
+            </div>
+            <figure class="portrait-frame">
+              <img src="me2.png" alt="Portrait of Philderev">
+              <figcaption><span>PHILDEREV</span><span>B&amp;W // 01</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 WORK — ASGS -->
+      <section class="panel work" data-label="Work — Alegre Solutions GS">
+        <div class="panel-content">
+          <p class="eyebrow">&gt;03_ WORK <span class="cursor"></span></p>
+          <div class="work-grid">
+            <div>
+              <p class="index">01 / 03</p>
+              <h2>Alegre<br>Solutions GS</h2>
+              <p class="tagline">A full growth system for home‑service contractors — Meta ads, CRM, and automated follow‑up, all built as one connected pipeline instead of scattered tools.</p>
+              <div class="stack"><span>MARKETING SYSTEM</span><span>CRM</span><span>LEAD GEN</span></div>
+              <a class="visit" href="https://philderev.github.io/Alegre.V2/" target="_blank" rel="noopener">VIEW SITE →</a>
+            </div>
+            <div class="preview">
+              <div class="bar"><i></i><i></i><i></i> philderev.github.io/Alegre.V2</div>
+              <div class="shot" style="--preview-src:url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fphilderev.github.io%2FAlegre.V2%2F?w=1600');"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 WORK — Altiora -->
+      <section class="panel work altiora-work" data-label="Work — Altiora Digital Marketing">
+        <div class="panel-content">
+          <p class="eyebrow">&gt;04_ WORK <span class="cursor"></span></p>
+          <div class="work-grid">
+            <div>
+              <p class="index">02 / 03</p>
+              <h2>Altiora Digital<br>Marketing</h2>
+              <p class="tagline">A clean, conversion‑ready site for a Google &amp; Meta ads agency — built to turn visitors into booked calls, not just page views.</p>
+              <div class="stack"><span>AGENCY SITE</span><span>GOOGLE ADS</span><span>META ADS</span></div>
+              <a class="visit" href="https://www.altioradigitalmarketing.com/" target="_blank" rel="noopener">VIEW SITE →</a>
+            </div>
+            <div class="preview">
+              <div class="bar"><i></i><i></i><i></i> altioradigitalmarketing.com</div>
+              <div class="shot" style="--preview-src:url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.altioradigitalmarketing.com%2F?w=1600');"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 WORK — GQ Cuts -->
+      <section class="panel work" data-label="Work — GQ Cuts Barbershop">
+        <div class="panel-content">
+          <p class="eyebrow">&gt;05_ WORK <span class="cursor"></span></p>
+          <div class="work-grid">
+            <div>
+              <p class="index">03 / 03</p>
+              <h2>GQ Cuts<br>Barbershop</h2>
+              <p class="tagline">A sharp, simple site for a local barbershop — built to get the phone ringing and the chairs full, without getting in the way.</p>
+              <div class="stack"><span>LOCAL BUSINESS</span><span>BOOKINGS</span><span>MOBILE‑FIRST</span></div>
+              <a class="visit" href="https://gqcutsbarbershop.com/" target="_blank" rel="noopener">VIEW SITE →</a>
+            </div>
+            <div class="preview">
+              <div class="bar"><i></i><i></i><i></i> gqcutsbarbershop.com</div>
+              <div class="shot" style="--preview-src:url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgqcutsbarbershop.com%2F?w=1600');"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 CONTACT -->
+      <section class="panel contact" data-label="Contact">
+        <div class="panel-content">
+          <p class="eyebrow">&gt;06_ CONTACT <span class="cursor"></span></p>
+          <h2>Let's build<br>something clean.</h2>
+          <p>Have a project in mind? Send a message — I usually reply within a day.</p>
+          <a class="email-link" href="mailto:phil.de.rev@gmail.com">phil.de.rev@gmail.com →</a>
+          <div class="socials">
+            <a href="#" target="_blank" rel="noopener">GITHUB</a>
+            <a href="#" target="_blank" rel="noopener">LINKEDIN</a>
+            <a href="#" target="_blank" rel="noopener">INSTAGRAM</a>
+          </div>
+        </div>
+        <div class="foot">
+          <span>PHILDEREV © 2026</span>
+          <span>BUILT IN VS CODE WITH CLAUDE</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
