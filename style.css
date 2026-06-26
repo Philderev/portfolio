@@ -219,7 +219,7 @@ h1,h2,h3{ margin:0; font-family:var(--display); text-transform:uppercase; }
 /* WORK ------------------------------------------------------------ */
 .work-grid{
   display:grid;
-  grid-template-columns: .66fr 1.34fr;
+  grid-template-columns: 1fr 1fr;
   gap:clamp(32px,4.8vw,64px);
   align-items:center;
 }
