@@ -9,34 +9,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,300;0,400;0,600;0,700;0,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="preload" as="image" href="1.png">
+<link rel="preload" as="image" href="2.png">
+<link rel="preload" as="image" href="3.png">
+<link rel="preload" as="image" href="4.png">
+<link rel="preload" as="image" href="5.png">
 </head>
 <body data-tone="dark">
 
-  <div class="grain" aria-hidden="true"></div>
   <div class="progress-rail" aria-hidden="true"></div>
 
   <main class="viewport" role="region" aria-label="Portfolio — scroll or use arrow keys to move between sections">
 
-    <!-- shared smoke atmosphere, parallaxed independently of the track -->
-    <div class="atmosphere" aria-hidden="true">
-      <canvas class="particle-field"></canvas>
-      <div class="transition-portal">
-        <span class="portal-ring r1"></span>
-        <span class="portal-ring r2"></span>
-        <span class="portal-ring r3"></span>
-        <span class="portal-core"></span>
-      </div>
-      <div class="smoke-layer l1" data-speed="0.18">
-        <div class="smoke-blob a"></div>
-        <div class="smoke-blob d"></div>
-      </div>
-      <div class="smoke-layer l2" data-speed="0.32">
-        <div class="smoke-blob b"></div>
-      </div>
-      <div class="smoke-layer l3" data-speed="0.48">
-        <div class="smoke-blob c"></div>
-      </div>
-    </div>
+    <video class="smoke-bg" src="smoke-bg.webm" muted playsinline preload="auto" aria-hidden="true"></video>
 
     <div class="track">
 
@@ -45,12 +30,37 @@
         <div class="panel-content">
           <p class="eyebrow">&gt;01_ INTRO <span class="cursor"></span></p>
           <h1 class="name">PHILDEREV</h1>
-          <p class="role">Web designer. <b>20 years</b> living inside VS Code — now working AI‑assisted to move faster without lowering the bar.</p>
-          <p class="scroll-hint">SCROLL OR DRAG <span class="arrow">→</span></p>
+          <div class="intro-sub-grid">
+            <div>
+              <p class="role">Web designer. Graphic designer. Video editor. <b>20 years</b> living inside VS Code — now working AI‑assisted to move faster without lowering the bar.</p>
+              <p class="scroll-hint">SCROLL OR DRAG <span class="arrow">→</span></p>
+            </div>
+            <div class="intro-stat-col">
+              <div class="contact-stat">
+                <span class="stat-label">DISCIPLINES</span>
+                <div class="stat-tags">
+                  <span>Web Design</span>
+                  <span>Graphic Design</span>
+                  <span>Video Editing</span>
+                </div>
+              </div>
+              <div class="contact-stat">
+                <span class="stat-label">EXPERIENCE</span>
+                <span class="stat-value">20 Years</span>
+              </div>
+              <div class="contact-stat">
+                <span class="stat-label">WORKFLOW</span>
+                <span class="stat-value">VS Code · AI‑Assisted</span>
+              </div>
+              <div class="contact-stat">
+                <span class="stat-label">STATUS</span>
+                <span class="stat-value open">Open for projects</span>
+              </div>
+            </div>
+          </div>
         </div>
         <figure class="intro-portrait" aria-label="Portrait of Philderev">
-          <img class="portrait-img portrait-base" src="me.png" alt="Portrait of Philderev">
-          <img class="portrait-img portrait-next" src="me3.png" alt="" aria-hidden="true">
+          <img class="portrait-img" id="intro-portrait-img" src="1.png" alt="Portrait of Philderev">
         </figure>
       </section>
 
@@ -60,18 +70,37 @@
           <p class="eyebrow">&gt;02_ ABOUT <span class="cursor"></span></p>
           <div class="about-grid">
             <div>
-              <h2>Two decades.<br>One editor.<br>New tools.</h2>
-              <p>I'm Philderev — a web designer who has spent 20 years writing and shaping sites in VS Code. AI didn't replace that craft, it sharpened it: I work smarter and faster now, but every site I ship still has to look right, run clean, and do its job.</p>
+              <h2>Two decades.<br>One editor.<br>Every screen.</h2>
+              <p>I'm Philderev — a web designer, graphic designer, and video editor with 20 years in VS Code. I build sites, craft visuals, and cut video. AI didn't replace that range, it sharpened it: I move faster now, but everything I ship still has to look right, feel right, and do its job.</p>
               <div class="tags">
-                <span class="tag">20 YEARS</span>
-                <span class="tag">VS CODE</span>
-                <span class="tag">AI‑ASSISTED WORKFLOW</span>
+                <span class="tag">WEB DESIGN</span>
+                <span class="tag">GRAPHIC DESIGN</span>
+                <span class="tag">VIDEO EDITING</span>
+                <span class="tag">AI‑ASSISTED</span>
               </div>
             </div>
-            <figure class="portrait-frame">
-              <img src="me2.png" alt="Portrait of Philderev">
-              <figcaption><span>PHILDEREV</span><span>B&amp;W // 01</span></figcaption>
-            </figure>
+            <div class="about-stat-col">
+              <div class="contact-stat">
+                <span class="stat-label">FOCUS</span>
+                <div class="stat-tags">
+                  <span>Web Design</span>
+                  <span>Graphic Design</span>
+                  <span>Video Editing</span>
+                </div>
+              </div>
+              <div class="contact-stat">
+                <span class="stat-label">APPROACH</span>
+                <span class="stat-value">AI‑Assisted Workflow</span>
+              </div>
+              <div class="contact-stat">
+                <span class="stat-label">TOOLS</span>
+                <span class="stat-value">VS Code · Adobe Suite</span>
+              </div>
+              <div class="contact-stat">
+                <span class="stat-label">YEARS ACTIVE</span>
+                <span class="stat-value">20</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -85,7 +114,16 @@
               <p class="index">01 / 03</p>
               <h2>Alegre<br>Solutions GS</h2>
               <p class="tagline">A full growth system for home‑service contractors — Meta ads, CRM, and automated follow‑up, all built as one connected pipeline instead of scattered tools.</p>
-              <div class="stack"><span>MARKETING SYSTEM</span><span>CRM</span><span>LEAD GEN</span></div>
+              <div class="project-stats">
+                <div class="contact-stat">
+                  <span class="stat-label">TYPE</span>
+                  <span class="stat-value">Growth Marketing System</span>
+                </div>
+                <div class="contact-stat">
+                  <span class="stat-label">SERVICES</span>
+                  <div class="stat-tags"><span>Meta Ads</span><span>CRM</span><span>Lead Gen</span></div>
+                </div>
+              </div>
               <a class="visit" href="https://philderev.github.io/Alegre.V2/" target="_blank" rel="noopener">VIEW SITE →</a>
             </div>
             <div class="preview">
@@ -105,7 +143,16 @@
               <p class="index">02 / 03</p>
               <h2>Altiora Digital<br>Marketing</h2>
               <p class="tagline">A clean, conversion‑ready site for a Google &amp; Meta ads agency — built to turn visitors into booked calls, not just page views.</p>
-              <div class="stack"><span>AGENCY SITE</span><span>GOOGLE ADS</span><span>META ADS</span></div>
+              <div class="project-stats">
+                <div class="contact-stat">
+                  <span class="stat-label">TYPE</span>
+                  <span class="stat-value">Agency Website</span>
+                </div>
+                <div class="contact-stat">
+                  <span class="stat-label">SERVICES</span>
+                  <div class="stat-tags"><span>Google Ads</span><span>Meta Ads</span><span>Web Design</span></div>
+                </div>
+              </div>
               <a class="visit" href="https://www.altioradigitalmarketing.com/" target="_blank" rel="noopener">VIEW SITE →</a>
             </div>
             <div class="preview">
@@ -125,7 +172,16 @@
               <p class="index">03 / 03</p>
               <h2>GQ Cuts<br>Barbershop</h2>
               <p class="tagline">A sharp, simple site for a local barbershop — built to get the phone ringing and the chairs full, without getting in the way.</p>
-              <div class="stack"><span>LOCAL BUSINESS</span><span>BOOKINGS</span><span>MOBILE‑FIRST</span></div>
+              <div class="project-stats">
+                <div class="contact-stat">
+                  <span class="stat-label">TYPE</span>
+                  <span class="stat-value">Local Business Site</span>
+                </div>
+                <div class="contact-stat">
+                  <span class="stat-label">SERVICES</span>
+                  <div class="stat-tags"><span>Bookings</span><span>Mobile‑First</span><span>Web Design</span></div>
+                </div>
+              </div>
               <a class="visit" href="https://gqcutsbarbershop.com/" target="_blank" rel="noopener">VIEW SITE →</a>
             </div>
             <div class="preview">
@@ -140,13 +196,46 @@
       <section class="panel contact" data-label="Contact">
         <div class="panel-content">
           <p class="eyebrow">&gt;06_ CONTACT <span class="cursor"></span></p>
-          <h2>Let's build<br>something clean.</h2>
-          <p>Have a project in mind? Send a message — I usually reply within a day.</p>
-          <a class="email-link" href="mailto:phil.de.rev@gmail.com">phil.de.rev@gmail.com →</a>
-          <div class="socials">
-            <a href="#" target="_blank" rel="noopener">GITHUB</a>
-            <a href="#" target="_blank" rel="noopener">LINKEDIN</a>
-            <a href="#" target="_blank" rel="noopener">INSTAGRAM</a>
+          <div class="contact-grid">
+
+            <div class="contact-left">
+              <h2>Let's build<br>something clean.</h2>
+              <p>Have a project in mind? I work with contractors, agencies, and local businesses — designing and building sites that look right, run clean, and actually do their job. Usually reply within a day.</p>
+              <a class="email-link" href="mailto:phil.de.rev@gmail.com">phil.de.rev@gmail.com →</a>
+              <div class="socials">
+                <a href="#" target="_blank" rel="noopener">GITHUB</a>
+                <a href="#" target="_blank" rel="noopener">LINKEDIN</a>
+                <a href="#" target="_blank" rel="noopener">INSTAGRAM</a>
+              </div>
+            </div>
+
+            <div class="contact-right">
+              <div class="contact-stat">
+                <span class="stat-label">STATUS</span>
+                <span class="stat-value open">Open for projects</span>
+              </div>
+              <div class="contact-stat">
+                <span class="stat-label">RESPONSE TIME</span>
+                <span class="stat-value">Within 24 hours</span>
+              </div>
+              <div class="contact-stat">
+                <span class="stat-label">SERVICES</span>
+                <div class="stat-tags">
+                  <span>Web Design</span>
+                  <span>Graphic Design</span>
+                  <span>Video Editing</span>
+                  <span>Development</span>
+                  <span>Landing Pages</span>
+                  <span>Agency Sites</span>
+                  <span>AI-Assisted</span>
+                </div>
+              </div>
+              <div class="contact-stat">
+                <span class="stat-label">EXPERIENCE</span>
+                <span class="stat-value">20 Years in VS Code</span>
+              </div>
+            </div>
+
           </div>
         </div>
         <div class="foot">
