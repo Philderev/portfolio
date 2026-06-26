@@ -5,8 +5,8 @@
   const progressRail = document.querySelector('.progress-rail');
   const introPortraitImg = document.getElementById('intro-portrait-img');
   const smokeBg = document.querySelector('.smoke-bg');
-  smokeBg.pause();
   let lastVideoTime = -1;
+  smokeBg.addEventListener('canplay', () => smokeBg.pause(), { once: true });
   const introPortraitEl = document.querySelector('.intro-portrait');
   const panelContentsEl = panels.map(p => p.querySelector('.panel-content'));
 
