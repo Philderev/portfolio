@@ -1,10 +1,18 @@
 (() => {
+  const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+
+  const smokeBg = document.querySelector('.smoke-bg');
+  // On mobile: let autoplay loop run freely, no JS scroll engine
+  if (isMobile) {
+    smokeBg.play().catch(() => {});
+    return;
+  }
+
   const viewport = document.querySelector('.viewport');
   const track = document.querySelector('.track');
   const panels = Array.from(document.querySelectorAll('.panel'));
   const progressRail = document.querySelector('.progress-rail');
   const introPortraitImg = document.getElementById('intro-portrait-img');
-  const smokeBg = document.querySelector('.smoke-bg');
   let lastVideoTime = -1;
   smokeBg.addEventListener('canplay', () => smokeBg.pause(), { once: true });
   const introPortraitEl = document.querySelector('.intro-portrait');
