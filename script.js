@@ -125,15 +125,15 @@
 
     progressRail.style.width = (progress * 100) + '%';
 
-    // smoke video — throttled seek
+    // smoke: seek to scroll position (forward + rewind)
     if (smokeBg.readyState >= 2 && smokeBg.duration) {
-      const t = (progress * 0.3 * 2) % 2;
-      const newTime = (t <= 1 ? t : 2 - t) * smokeBg.duration;
-      if (Math.abs(newTime - lastVideoTime) > 0.1) {
+      const newTime = Math.max(0, Math.min(smokeBg.duration, progress * smokeBg.duration));
+      if (Math.abs(newTime - lastVideoTime) > 0.016) {
         smokeBg.currentTime = newTime;
         lastVideoTime = newTime;
       }
     }
+
 
     // 5-frame portrait cycling (intro panel width = panelWidths[0])
     const introW = panelWidths[0] || vw;

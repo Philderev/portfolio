@@ -216,6 +216,56 @@ h1,h2,h3{ margin:0; font-family:var(--display); text-transform:uppercase; }
   color:var(--white);
 }
 
+/* TRANSITION PANEL ------------------------------------------------ */
+.panel.transition-panel{
+  flex:0 0 28vw;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+  overflow:hidden;
+}
+.panel.transition-panel::before{
+  content:'WORK';
+  position:absolute;
+  font-family:var(--display);
+  font-size:clamp(80px,20vw,260px);
+  color:rgba(243,241,234,.04);
+  letter-spacing:-.02em;
+  transform:rotate(-90deg);
+  white-space:nowrap;
+  pointer-events:none;
+  user-select:none;
+  z-index:0;
+}
+.transition-content{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:28px;
+}
+.transition-label{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.22em;
+  color:var(--ash);
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+}
+.transition-rule{
+  width:1px;
+  height:clamp(60px,10vh,100px);
+  background:var(--hair);
+}
+.transition-count{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.16em;
+  color:rgba(243,241,234,.35);
+  writing-mode:vertical-rl;
+}
+
 /* WORK ------------------------------------------------------------ */
 .work-grid{
   display:grid;
